@@ -1,5 +1,8 @@
 package com.apollo.engine.world;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Tile {
 
   /**
@@ -17,16 +20,23 @@ public class Tile {
    */
   private TileType type;
 
+  /**
+   * Tiles that neighbor this one.
+   */
+  private List<Tile> neighbors;
+
   public Tile(int x, int y, TileType type) {
     this.x = x;
     this.y = y;
     this.type = type;
+    this.neighbors = new ArrayList<>();
   }
 
   public Tile(Tile tile) {
     this.x = tile.x;
     this.y = tile.y;
     this.type = tile.type;
+    this.neighbors = tile.neighbors;
   }
 
   public void set(int x, int y, TileType type) {
@@ -57,6 +67,14 @@ public class Tile {
 
   public void setType(TileType type) {
     this.type = type;
+  }
+
+  public List<Tile> getNeighbors() {
+    return neighbors;
+  }
+
+  public void setNeighbors(List<Tile> neighbors) {
+    this.neighbors = neighbors;
   }
 
   @Override

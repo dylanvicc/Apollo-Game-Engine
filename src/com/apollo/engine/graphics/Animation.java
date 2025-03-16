@@ -23,7 +23,7 @@ public class Animation {
 
   /**
    * Renders a sequence of frames at specified pixel coordinate points. Enables
-   * anti-aliasing and key interpolation.
+   * anti-aliasing and interpolation.
    * 
    * @param graphics Encapsulates state information for basic two-dimensional
    *                 graphics.
